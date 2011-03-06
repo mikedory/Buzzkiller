@@ -1,0 +1,79 @@
+#!/usr/bin/env python
+# encoding: utf-8
+"""
+buzzkiller.py
+
+Created by Michael Dory on 2011-03-05.
+Copyright (c) 2011 DxM. All rights reserved.
+"""
+
+import argparse
+import sys
+import logging
+
+def main(arguments=None):
+
+		# create the parser
+		parser = arguments(
+				description='Sum the integers on the command line.')
+
+		# check the command line for incoming words
+		parser.add_argument(
+				'words', metavar='str', type=str, nargs='+',
+				help='words you want to check against')
+
+		# make a seperate log file, if that's your sort of thing
+		parser.add_argument(
+				'--log', type=argparse.FileType('w'), default=sys.stdout,
+				help='the file where the sum should be written '
+						 '(default: write the sum to stdout)')
+
+		# parse the command line
+		args = parser.parse_args()
+
+		# open the files to compare against
+		weasels = readFile("weasels.txt")
+		buzzwords = readFile("buzzwords.txt")
+
+		# print weasels and buzzwords when they are found
+		for line in args.words:
+				line = line.strip()
+				for token in line.split(" "):
+					
+					# call out the weasels
+					if token in weasels:
+						print 'WEASEL: '+token
+
+					# call out the buzzwords
+					if token in buzzwords:
+						print 'BUZZWORD: '+token
+
+
+		# grab the datters
+		args.log.write('%s \n' % (args.words))
+		args.log.close()
+
+
+# handy funciton for opening files and returning lists
+def readFile(fileHandle): 
+
+		print 'checking file named %s' % fileHandle
+
+		line = fileHandle
+		weaselList = []
+
+		with open(fileHandle) as f:
+			for line in f:
+				line = line.strip()
+				weaselList.append(line)
+
+		return weaselList
+
+if __name__ == "__main__":
+	print ' '
+	print ' ------------ '
+	print ' Here goes... '
+	print ' ------------ '
+	print ' '
+	sys.exit(main(argparse.ArgumentParser))
+

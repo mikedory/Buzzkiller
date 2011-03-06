@@ -1,0 +1,145 @@
+real-time (quick)  
+dynamic (changeable)  
+state of the art (current)  
+next generation (modern)  
+leverage (advantage)  
+cloud (Internet)  
+user friendly (clear)  
+ROI (value)  
+seamless (well integrated)  
+scalable (flexible)  
+proactive (acting in a timely manner)  
+best in class (best)  
+return on investment (value)  
+turnkey (ready to use)  
+mission critical (important)  
+dashboard (display)  
+iconic (recognizable)  
+ecosytem (working together)  
+best of breed (best)  
+enterprise class (best)  
+synergy (contribution)  
+out of the box (unconventional, or ready to use)  
+stack (range)  
+value proposition (value)  
+disruptive (change)  
+disruption (change)  
+mindshare (influence)  
+space-age (modern)  
+bleeding edge (modern)  
+exit strategy (plan)  
+customer-centric (marketing)  
+sea change (change)  
+sticky (enduring)  
+silo	(separate)  
+synergistic (cooperative)  
+client-centric (marketing)  
+outside the box (unconventional)  
+paradigm shift (change)  
+perfect storm (bad luck)  
+organic growth (as if alive)  
+top-down (leader driven)  
+next-gen (modern)  
+bottom-up (worker driven)  
+secret sauce	(key ingredient)  
+low hanging fruit (vulnerable)
+leader 
+leading 
+best 
+top 
+unique 
+great 
+solution 
+largest 
+innovative 
+innovator 
+award winning 
+exclusive 
+premier 
+extensive 
+leading provider 
+innovation 
+real-time 
+fastest 
+easy to use 
+dynamic 
+state of the art 
+smart 
+flexible 
+cutting edge 
+biggest 
+world class 
+amazing 
+next generation 
+revolutionary 
+sustainable 
+best practices 
+leverage 
+thrilled 
+robust 
+delighted 
+cloud 
+user friendly 
+extraordinary 
+breakthrough 
+savvy 
+ROI 
+legendary 
+transform 
+seamless 
+groundbreaking 
+empower 
+scalable 
+one of a kind 
+proactive 
+best in class 
+return on investment 
+market leading 
+turnkey 
+mission critical 
+strategic partnership 
+ground breaking 
+dashboard 
+iconic 
+stakeholder(s) 
+industry standard 
+never before 
+re-purpose 
+ecosytem 
+win-win 
+best of breed 
+enterprise class 
+empowerment 
+magical 
+synergy 
+out of the box 
+feature-rich 
+stack 
+cross-platform 
+value proposition 
+well positioned 
+disruptive 
+hit the ground running 
+disruption 
+mindshare 
+space-age 
+bleeding edge 
+exit strategy 
+customer-centric 
+sea change 
+sticky 
+silo 
+synergistic 
+client-centric 
+outside the box 
+paradigm shift 
+peak performance 
+perfect storm 
+organic growth 
+top-down 
+next-gen 
+never been done 
+bottom-up 
+solution-driven 
+secret sauce 
+low hanging fruit 
