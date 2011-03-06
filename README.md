@@ -37,3 +37,5 @@ To do everything, try this:
 
 
 Oh also, you'll need the [argparse](http://docs.python.org/dev/library/argparse.html) module for Python.  If you're running Python 2.7+, you should already have it.  If not, you should be able to install it with easy_install or apt-get or whatever works on the system you're using.
+
+Finally, I should note, the list of buzzwords is cobbled together from a few internet sources discussing the matter, most notably [this post](http://www.adamsherk.com/public-relations/most-overused-press-release-buzzwords/) from [Adam Sherk](http://www.adamsherk.com/)'s blog post on the subject.  More will be added, and attributed, accordingly.
