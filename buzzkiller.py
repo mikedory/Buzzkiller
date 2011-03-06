@@ -21,7 +21,7 @@ def main(arguments=None):
 
 	# check the command line for incoming words
 	parser.add_argument(
-			'checkWords', metavar='str', type=str, nargs='+',
+			'checkWords', metavar='str', type=str, nargs='?',
 			help='words you want to check against from the command line'
 	)
 
@@ -48,8 +48,9 @@ def main(arguments=None):
 	args = parser.parse_args()
 
 	# open the files to compare against
-	weasels = readFile("weasels.txt")
+	weaselwords = readFile("weaselwords.txt")
 	buzzwords = readFile("buzzwords.txt")
+	officewords = readFile("officewords.txt")
 	
 	# define the document to search through
 	document = []
@@ -67,29 +68,32 @@ def main(arguments=None):
 	if (document is not None):
 		args.log.write('\nAlrighty, let\'s see what you\'ve got here: \n\n')
 
-		# log(weasels and buzzwords when they are found
+		# log the weasel, buzz and office words when they are found
 		for line in document:
 				line = line.strip()
 				for token in line.split(" "):
 				
 					# call out the weasels
-					if token in weasels:
-						args.log.write('WEASEL: ' + token + '\n')
+					if token in weaselwords:
+						args.log.write('WEASELWORD: ' + token + '\n')
 
 					# call out the buzzwords
 					if token in buzzwords:
 						args.log.write('BUZZWORD: ' + token + '\n')
 
+					# call out the office jargron terms
+					if token in officewords:
+						args.log.write('OFFICEWORD: ' + token + '\n')
 
 	# if someone set the -v verbose flag, tell them about the arguments they used
 	if (args.verbose is not False):
-		args.log.write('\n --------------------------- \n\n')
-		args.log.write(' These were your test words: \n')
-		args.log.write('\n --------------------------- \n\n')
+		args.log.write('\n--------------------------- \n\n')
+		args.log.write('These were your test words: \n')
+		args.log.write('\n--------------------------- \n\n')
 
 		# log(out the list of words you checked against
 		args.log.write('%s \n' % (document))
-		args.log.write('\n --------------------------- \n\n')
+		args.log.write('\n--------------------------- \n\n')
 
 		# if there was a file used, print its name
 		if (args.f is not None):
@@ -97,7 +101,6 @@ def main(arguments=None):
 			args.log.write('\n --------------------------- \n\n')
 
 	# close up shop
-	print 'done!'
 	args.log.write('\nHey, that was fun, right? \n')
 	args.log.close()
 
@@ -105,7 +108,7 @@ def main(arguments=None):
 # handy funciton for opening files and returning lists
 def readFile(fileHandle): 
 
-		print('checking file named %s' % fileHandle)
+		print('- checking file named %s' % fileHandle)
 
 		fileContents = open(fileHandle)
 		wordList = fileToList(fileContents)
@@ -137,10 +140,8 @@ def fileToList(file,split=False):
 	
 # do that thang!
 if __name__ == "__main__":
-	print ' '
-	print ' ------------ '
-	print ' Here goes... '
-	print ' ------------ '
-	print ' '
-	sys.exit(main(argparse.ArgumentParser))
+	print '\nHere goes some parse magic...\n'
+	theMain = main(argparse.ArgumentParser)
+	print '\ndone!\n'
+	sys.exit(theMain)
 
