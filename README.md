@@ -2,9 +2,9 @@
 
 __Wait, what?__
 
-So I can't speak for you, but I don't like buzzwords.  I've worked in media companies and the tech startup scene long enough to start to actually get a little itchy when someone says one.  Of course, this generally means a bunch fall out of my mouth too, and that makes me sadder.
+So I can't speak for you, but I don't like buzzwords.  I've worked in media companies and the tech startup scene long enough to start to actually get a little itchy when someone starts tossing them out.  Of course, I'm not all that much better — I've certainly seen a bunch fall out of my mouth too, and that makes me sadder yet.
 
-A while back, I'd read about [Matt Might](matt.might.net)'s [weasel word Perl scripts](http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/), and I loved the idea.  So, after a conversation with a friend about buzzword-crazed emails, I decided I wanted to port the idea to Python.
+A while back, I'd read about [Matt Might](matt.might.net)'s [weasel word Perl scripts](http://matt.might.net/articles/shell-scripts--fileor-passive-voice-weasel-words-duplicates/), and I loved the idea.  So, after a conversation with some friends about buzzword-crazed emails, I decided I wanted to port the idea to Python.
 
 This is so very, __very__ much a work in progress, but so far, it's fun!
 
@@ -17,11 +17,11 @@ You would run it thusly:
 
 To use a file full of words to check against, instead of the command line, try it this way:
 
-	./buzzkiller.py -f exampleFile.txt
+	./buzzkiller.py --file exampleFile.txt
 
 To run it with a file and extra arguments, you might do that like this:
 
-	./buzzkiller.py -f exampleFile.txt many various peak performance top-down silo
+	./buzzkiller.py --file exampleFile.txt many various peak performance top-down silo
 
 You can also specify an output file, like so:
 
@@ -29,11 +29,11 @@ You can also specify an output file, like so:
 
 There's also a verbose mode, in case you were curious as to what was being searched for and against:
 
-	./buzzkiller.py -f exampleFile.txt -v
+	./buzzkiller.py --file exampleFile.txt -v
 
 To do everything, try this:
 
-	./buzzkiller.py -f exampleFile.txt -v --log 'output.txt' many various peak performance top-down silo
+	./buzzkiller.py --file exampleFile.txt -v --log 'output.txt' many various peak performance top-down silo
 
 And depending on what you're searching, you'll probably see output like this:
 

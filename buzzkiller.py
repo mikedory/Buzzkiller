@@ -27,7 +27,7 @@ def main(arguments=None):
 
 	# allow folks to check a file instead of against the command line
 	parser.add_argument(
-			'-f', metavar='open', type=open, nargs='?',
+			'--file', metavar='open', type=open, nargs='?',
 			help='words you want to check against from a file'
 	)
 
@@ -56,8 +56,8 @@ def main(arguments=None):
 	document = []
 
 	# if there is a file specified, let's search that
-	if (args.f is not None):
-		newFile = fileToList(args.f, True)
+	if (args.file is not None):
+		newFile = fileToList(args.file, True)
 		document.extend(newFile)
 	
 	# if there are additional words on the end, let's search them too
@@ -96,8 +96,8 @@ def main(arguments=None):
 		args.log.write('\n--------------------------- \n\n')
 
 		# if there was a file used, print its name
-		if (args.f is not None):
-			args.log.write('And we looked through a file called: %s\n\n' % args.f.name)
+		if (args.file is not None):
+			args.log.write('And we looked through a file called: %s\n\n' % args.file.name)
 			args.log.write('\n --------------------------- \n\n')
 
 	# close up shop
