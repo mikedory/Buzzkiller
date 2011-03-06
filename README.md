@@ -8,7 +8,7 @@ A while back, I'd read about [Matt Might](matt.might.net)'s [weasel word Perl sc
 
 This is so very, __very__ much a work in progress, but so far, it's fun!
 
-Usage is pretty straightforward: the script will run a check against the files stored, and it will tell you all about the things it finds.
+Usage is pretty straightforward: the script will run a check against the files stored, and it will tell you all about the things it finds.  It's looking for buzzwords, office jargon-type terms, and weasel words (as defined by Matt as noted above).
 
 
 You would run it thusly:
@@ -35,7 +35,24 @@ To do everything, try this:
 
 	./buzzkiller.py -f exampleFile.txt -v --log 'output.txt' many various peak performance top-down silo
 
+And depending on what you're searching, you'll probably see output like this:
+
+	Here goes some parse magic...
+
+	checking file named weaselwords.txt
+	checking file named buzzwords.txt
+	checking file named officewords.txt
+
+	Alrighty, let's see what you've got here: 
+
+	WEASELWORD: many
+	WEASELWORD: few
+	OFFICEWORD: bandwidth
+	OFFICEWORD: orbit
+	BUZZWORD: cloud
+
+
 
 Oh also, you'll need the [argparse](http://docs.python.org/dev/library/argparse.html) module for Python.  If you're running Python 2.7+, you should already have it.  If not, you should be able to install it with easy_install or apt-get or whatever works on the system you're using.
 
-Finally, I should note, the list of buzzwords is cobbled together from a few internet sources discussing the matter, most notably [this post](http://www.adamsherk.com/public-relations/most-overused-press-release-buzzwords/) from [Adam Sherk](http://www.adamsherk.com/)'s blog post on the subject.  More will be added, and attributed, accordingly.
+Finally, I should note, the list of buzzwords is cobbled together from a few internet sources discussing the matter, most notably [this post](http://www.adamsherk.com/public-relations/most-overused-press-release-buzzwords/) from [Adam Sherk](http://www.adamsherk.com/)'s blog post on the subject and [Marlys Harris' column on office terms](http://moneywatch.bnet.com/saving-money/blog/consumer-reporter/words-you-should-never-use-at-the-office-unless-you-have-to/292/?tag=col1;blog-river).  More will be added, and attributed, accordingly.
