@@ -13,27 +13,27 @@ Usage is pretty straightforward: the script will run a check against the files s
 
 You would run it thusly:
 
-	./buzzkiller many various peak performance top-down silo
+	./buzzkiller.py many various peak performance top-down silo
 
 To use a file full of words to check against, instead of the command line, try it this way:
 
-	./buzzkiller -f exampleFile.txt
+	./buzzkiller.py -f exampleFile.txt
 
 To run it with a file and extra arguments, you might do that like this:
 
-	./buzzkiller -f exampleFile.txt many various peak performance top-down silo
+	./buzzkiller.py -f exampleFile.txt many various peak performance top-down silo
 
 You can also specify an output file, like so:
 
-	./buzzkiller --log 'output.txt'
+	./buzzkiller.py --log 'output.txt'
 
 There's also a verbose mode, in case you were curious as to what was being searched for and against:
 
-	./buzzkiller -f exampleFile.txt -v
+	./buzzkiller.py -f exampleFile.txt -v
 
 To do everything, try this:
 
-	./buzzkiller -f exampleFile.txt -v --log 'output.txt' many various peak performance top-down silo
+	./buzzkiller.py -f exampleFile.txt -v --log 'output.txt' many various peak performance top-down silo
 
 
 Oh also, you'll need the [argparse](http://docs.python.org/dev/library/argparse.html) module for Python.  If you're running Python 2.7+, you should already have it.  If not, you should be able to install it with easy_install or apt-get or whatever works on the system you're using.
