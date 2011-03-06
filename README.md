@@ -8,10 +8,32 @@ A while back, I'd read about [Matt Might](matt.might.net)'s [weasel word Perl sc
 
 This is so very, __very__ much a work in progress, but so far, it's fun!
 
-You would run it thusly
+Usage is pretty straightforward: the script will run a check against the files stored, and it will tell you all about the things it finds.
 
-    ./buzzkiller many various peak performance top-down silo
 
-And it will tell you all about the things it finds.
+You would run it thusly:
 
-Oh also, you'll need Argparse.
+	./buzzkiller many various peak performance top-down silo
+
+To use a file full of words to check against, instead of the command line, try it this way:
+
+	./buzzkiller -f exampleFile.txt
+
+To run it with a file and extra arguments, you might do that like this:
+
+	./buzzkiller -f exampleFile.txt many various peak performance top-down silo
+
+You can also specify an output file, like so:
+
+	./buzzkiller --log 'output.txt'
+
+There's also a verbose mode, in case you were curious as to what was being searched for and against:
+
+	./buzzkiller -f exampleFile.txt -v
+
+To do everything, try this:
+
+	./buzzkiller -f exampleFile.txt -v --log 'output.txt' many various peak performance top-down silo
+
+
+Oh also, you'll need the [argparse](http://docs.python.org/dev/library/argparse.html) module for Python.  If you're running Python 2.7+, you should already have it.  If not, you should be able to install it with easy_install or apt-get or whatever works on the system you're using.
