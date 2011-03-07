@@ -21,7 +21,7 @@ def main(arguments=None):
 
 	# check the command line for incoming words
 	parser.add_argument(
-			'checkWords', metavar='str', type=str, nargs='?',
+			'checkWords', metavar='str', type=str, nargs='*',
 			help='words you want to check against from the command line'
 	)
 
@@ -48,9 +48,9 @@ def main(arguments=None):
 	args = parser.parse_args()
 
 	# open the files to compare against
-	weaselwords = readFile("weaselwords.txt")
-	buzzwords = readFile("buzzwords.txt")
-	officewords = readFile("officewords.txt")
+	weaselwords = readFile("./textfiles/weaselwords.txt")
+	buzzwords = readFile("./textfiles/buzzwords.txt")
+	officewords = readFile("./textfiles/officewords.txt")
 	
 	# define the document to search through
 	document = []
@@ -142,6 +142,5 @@ def fileToList(file,split=False):
 if __name__ == "__main__":
 	print '\nHere goes some parse magic...\n'
 	theMain = main(argparse.ArgumentParser)
-	print '\ndone!\n'
 	sys.exit(theMain)
 
